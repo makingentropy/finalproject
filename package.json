@@ -1,0 +1,24 @@
+{
+  "name": "finalproject",
+  "version": "1.0.0",
+  "description": "## Summary A site devoted to user review of media of the spoken or sung word, and secondarily instrumentals meant for vocal accompaniment. -------------- A user can post a link to a media file (i.e. embedded youtube or mp3).  This creates a \"thread\" where all users may post reviews on the track in discussion threads. On creation, the user chooses the category (e.g. \"Video\", \"Audio-only\", \"Instrumentals\"). The main thread inherits the title of the video.  Side-threads (i.e. \"sidebar\") are discussed below:",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/makingentropy/finalproject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/makingentropy/finalproject/issues"
+  },
+  "homepage": "https://github.com/makingentropy/finalproject#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4"
+  }
+}

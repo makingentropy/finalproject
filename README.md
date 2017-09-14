@@ -12,12 +12,16 @@ If a post gets enough boot votes, it is kicked out of that thread (main or sideb
 
 ## DATA
 
-Back end repo:
-Front end repo: https://github.com/makingentropy/finalproject
+Backend repo:  https://github.com/makingentropy/finalproject_backend
+Frontend repo: https://github.com/makingentropy/finalproject
+Heroku frontend repo: 
+Heroku backend repo:
 
 Live site:
 
-## User Stories
+## Planning:
+day-to-day: https://trello.com/b/L6qnLuaR/flowtracker
+
 Experience flow:
 ![ScreenShot](/#.jpg)
 
