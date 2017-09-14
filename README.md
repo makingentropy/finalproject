@@ -3,7 +3,7 @@
 ## Summary
 A site devoted to user review of media of the spoken or sung word, and secondarily instrumentals meant for vocal accompaniment.
 --------------
-A user can post a link to a media file (i.e. embedded youtube or mp3).  This creates a "thread" where all users may post reviews on the track. On creation, the user chooses the category (e.g. "Video", "Audio-only", "Instrumentals")
+A user can post a link to a media file (i.e. embedded youtube or mp3).  This creates a "thread" where all users may post reviews on the track in discussion threads. On creation, the user chooses the category (e.g. "Video", "Audio-only", "Instrumentals"). The main thread inherits the title of the video.  Side-threads (i.e. "sidebar") are discussed below:
 
 All users may post to a discussion thread per media file:
 Discussion will have a bespoke method of organization that is partially policed by community rule than admins:
