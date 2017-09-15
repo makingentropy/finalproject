@@ -10,6 +10,15 @@
 
   </head>
   <body ng-controller="appjsController as ctrl">
+    <!-- TESTING -->
     {{ctrl.test}}
+    <!-- HEADER -->
+    <div ng-include="'includes/static_nav.html'"></div>
+
+    <!-- REQUESTS: -->
+    <div ng-include="'includes/dynamic_createMedia.html'"></div>
+
+    <!-- FOOTER -->
+    <div ng-include="'includes/static_footer.html'"></div>
   </body>
 </html>
