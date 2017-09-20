@@ -14,7 +14,7 @@ If a post gets enough boot votes, it is kicked out of that thread (main or sideb
 
 Backend repo:  https://github.com/makingentropy/finalproject_backend
 Frontend repo: https://github.com/makingentropy/finalproject
-Heroku frontend repo: 
+Heroku frontend repo:
 Heroku backend repo:
 
 Live site:
@@ -33,12 +33,12 @@ User {
 }
 
 Media {
-  :required[:media_id, :media_name, :media_type, :date_posted, :author_id, :author name, :talent[:artist, :features["not_required"], :production["not_required"]]],
+  :required[:media_id, :url, :media_name, :media_type, genre: ,:date_posted, :author_id, :author_name, :talent[:artist, :features["not_required"], :production["not_required"]]],
   :rankings[:Avg_stars, :1s, :2s, :3s, :4s, :5s],
   :sticky, :wheels, :tags,
 }
 
-Thread{:thread_id, :posts[:post[:post_id, :author_id, :author_name, :narrative, :upvote_ids, :downvote_ids, :boot_ids, :sidebar[:sidebar_id, :sidebar_title, :sidebar_owner]]], :Category, :Sub_Category}
+Thread{:thread_id, :posts[:post[:post_id, :author_id, :author_name, :body, :upvote_ids, :downvote_ids, :boot_ids, :sidebar[:sidebar_id, :sidebar_title, :sidebar_owner]]], :Category, :Sub_Category}
 
 ##Approach
 

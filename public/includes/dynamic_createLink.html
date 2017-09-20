@@ -1,0 +1,14 @@
+<!-- <div ng-if="ctrl.pageShowing=='includes/dynamic_createMedia.html'"> -->
+  <div class="listContainer">
+    <form class="" ng-submit="ctrl.postLinks()">
+      Post Media File<br>
+      <!-- //will automatically get :id, :date_posted, :media_type -->
+      <input type="text" ng-model="ctrl.link_url" placeholder="URL"><br>
+      <input type="text" ng-model="ctrl.link_artist" placeholder="Main Artist"><br>
+      <input type="text" ng-model="ctrl.link_genre" placeholder="genre"><br>
+      <!-- <input type="text" ng-model="ctrl.link_features" placeholder="Featured Artists"><br>
+      <input type="text" ng-model="ctrl.link_producers" placeholder="Producers"><br> -->
+      <input type="submit" value="Post new link">
+    </form>
+  </div>
+<!-- </div> -->
