@@ -7,7 +7,7 @@
         <div ng-repeat="link in ctrl.allLinks track by $index" ng-mouseenter="hoverState = true" ng-mouseleave="hoverState = false" class="divListItem">
           <div ng-click="ctrl.linkSelected(link)">
             <div class="divListItem_header">{{link.url}}</div>
-            <div>{{link.type}}</div>
+            <div>media type:{{link.media_type}}</div>
             <div class="">genre: {{link.genre}}</div>
           </div>
         </div>

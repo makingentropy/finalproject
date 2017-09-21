@@ -5,7 +5,14 @@ app.controller("appjsController", ['$http', function($http){
   this.test="test good";
   this.pageShowing='includes/dynamic_createMedia.html';
   this.theLinkSelected={};
+  this.theUserSelected={};
 
+  this.userSelected=function(theUser){
+    //RENDER the following includes/*.html on index.html
+    this.pageShowing='includes/dynamic_updateUser.html';
+    console.log("theUser: ",theUser);
+    this.theUserSelected=theUser;
+  };
   this.linkSelected=function(theLink){
     //RENDER the following includes/*.html on index.html
     this.pageShowing='includes/dynamic_updateLink.html';
@@ -18,7 +25,7 @@ app.controller("appjsController", ['$http', function($http){
   this.postUsers = function(){
     $http({
       method: 'POST',
-      url: 'http://flowtracker-backend/users',
+      url: 'http://flowtracker-backend.herokuapp.com/users',
       data:{
         user:{
           username:controller.user_username,
@@ -33,17 +40,17 @@ app.controller("appjsController", ['$http', function($http){
     this.getUsers = function(){
       $http({
         method: 'GET',
-        url: 'http://flowtracker-backend/users'
+        url: 'http://flowtracker-backend.herokuapp.com/users'
       }).then(function(response){
           console.log("users retrieved: ",response.data);
-          controller.allusers=response.data;
+          controller.allUsers=response.data;
       }).catch(error=>console.log(error));
     };
 
     this.updateUsers = function(){
       $http({
         method: 'PUT',
-        url: 'http://flowtracker-backend/links/' + this.theuser.id,
+        url: 'http://flowtracker-backend.herokuapp.com/links/' + this.theUserSelected.id,
         data:{
           user:{
             username:controller.user_username,
@@ -52,6 +59,7 @@ app.controller("appjsController", ['$http', function($http){
         }
       }).then(function(response){
           console.log("user updated: ",response.data);
+          controller.pageShowing='includes/dynamic_getAllLinks.html'
       }).catch(error=>console.log(error));
     };
 
@@ -59,7 +67,7 @@ app.controller("appjsController", ['$http', function($http){
     console.log("delete this? ",this.theRequesterUser);
       $http({
         method: 'DELETE',
-        url: 'http://flowtracker-backend/users/' + this.theuser.id,
+        url: 'http://flowtracker-backend.herokuapp.com/users/' + this.theUserSelected.id,
       }).then(function(response){
         console.log(response);
 
@@ -76,11 +84,11 @@ app.controller("appjsController", ['$http', function($http){
   this.postLinks = function(){
     $http({
       method: 'POST',
-      url: 'http://flowtracker-backend/links',
+      url: 'http://flowtracker-backend.herokuapp.com/links',
       data:{
         link:{
           url:controller.link_url,
-          media_type:controller.link_artist,
+          media_type:controller.link_type,
           genre:controller.link_genre
         }
       }
@@ -92,17 +100,17 @@ app.controller("appjsController", ['$http', function($http){
   this.getLinks = function(){
     $http({
       method: 'GET',
-      url: 'http://flowtracker-backend/links'
+      url: 'http://flowtracker-backend.herokuapp.com/links'
     }).then(function(response){
         console.log("links retrieved: ",response.data);
         controller.allLinks=response.data;
     }).catch(error=>console.log(error));
   };
 
-  this.updateLinks = function(){
+  this.updateLink = function(){
     $http({
       method: 'PUT',
-      url: 'http://flowtracker-backend/links/' + this.thelink.id,
+      url: 'http://flowtracker-backend.herokuapp.com/links/' + this.theLinkSelected.id,
       data:{
         link:{
           url:controller.linkName,
@@ -112,17 +120,20 @@ app.controller("appjsController", ['$http', function($http){
       }
     }).then(function(response){
         console.log("link updated: ",response.data);
+        controller.ReadOneSubShowing="0";
+        controller.pageShowing='includes/dynamic_getAllLinks.html'
     }).catch(error=>console.log(error));
   };
 
-  this.deleteTask = function(){
-  console.log("delete this? ",this.thelink);
+  this.deleteLink = function(){
+  console.log("delete this? ",this.theLinkSelected);
     $http({
       method: 'DELETE',
-      url: 'http://flowtracker-backend/links/' + this.thelink.id,
+      url: 'http://flowtracker-backend.herokuapp.com/links/' + this.theLinkSelected.id,
     }).then(function(response){
-      console.log(response);
-
+      console.log("response: ",response);
+      controller.ReadOneSubShowing="0";
+      controller.pageShowing='includes/dynamic_getAllLinks.html';
     }, function(error){
       console.log('error');
     });
