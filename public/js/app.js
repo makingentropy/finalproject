@@ -48,12 +48,12 @@ app.controller("appjsController", ['$http', function($http){
     };
 
     this.updateUser = function(){
-      console.log("userName: controller.userName",);
-      console.log("userEmail: controller.userEmail",);
+      console.log("userName: ",controller.userName);
+      console.log("userEmail: ",controller.userEmail);
 
       $http({
         method: 'PUT',
-        url: 'http://flowtracker-backend.herokuapp.com/links/' + this.theUserSelected.id,
+        url: 'http://flowtracker-backend.herokuapp.com/users/' + this.theUserSelected.id,
         data:{
           user:{
             username:controller.userName,
