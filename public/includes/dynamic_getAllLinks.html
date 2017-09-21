@@ -1,11 +1,14 @@
 <!-- <div ng-if="ctrl.pageShowing=='includes/dynamic_getAllLinks.html'"> -->
-  <div>All links: <br><br>
+  <div>All Links: <br><br>
+    <form class="" ng-submit="ctrl.getLinks()">
+      <input type="submit" value="Show all links">
+    </form>
     <div class="listContainer">
         <div ng-repeat="link in ctrl.allLinks track by $index" ng-mouseenter="hoverState = true" ng-mouseleave="hoverState = false" class="divListItem">
-          <div ng-click="cCtrl.linkSelected(link)">
+          <div ng-click="ctrl.linkSelected(link)">
             <div class="divListItem_header">{{link.url}}</div>
             <div>{{link.type}}</div>
-            <div class="divListItem_author">genre: {{link.genre}}</div>
+            <div class="">genre: {{link.genre}}</div>
           </div>
         </div>
     </div>

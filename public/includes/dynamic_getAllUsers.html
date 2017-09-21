@@ -1,0 +1,15 @@
+<!-- <div ng-if="ctrl.pageShowing=='includes/dynamic_getAllUsers.html'"> -->
+  <div>All Users: <br><br>
+    <form class="" ng-submit="ctrl.getUsers()">
+      <input type="submit" value="Show all users">
+    </form>
+    <div class="listContainer">
+        <div ng-repeat="user in ctrl.allUsers track by $index" ng-mouseenter="hoverState = true" ng-mouseleave="hoverState = false" class="divListItem">
+          <div ng-click="ctrl.userSelected(user)">
+            <div class="divListItem_header">{{user.username}}</div>
+            <div class="">genre: {{user.email}}</div>
+          </div>
+        </div>
+    </div>
+  </div>
+<!-- </div> -->

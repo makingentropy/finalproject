@@ -1,4 +1,12 @@
 <!-- User { :required[:user_id, :email, :username, :password, :special_classes [admin, reviewer, artist, music industry professional, etc]], :user_settings[:subscribed_threads, :subscribed_tags], :profile[:narrative, :badges, :peer_upvotes, :peer_downvotes, :threads_authored, :last_wheel_date, :wheeled_today :wheels_remaining]] } -->
-<div ng-if="ctrl.pageShowing=='includes/dynamic_createUser.html'">
-Create User page
-</div>
+<!-- <div ng-if="ctrl.pageShowing=='includes/dynamic_createUser.html'"> -->
+  <div class="listContainer">
+    <form class="" ng-submit="ctrl.postUsers()">
+      Post Media File<br>
+      <!-- //will automatically get :id, :date_posted, :media_type -->
+      <input type="text" ng-model="ctrl.user_username" placeholder="username"><br>
+      <input type="text" ng-model="ctrl.user_email" placeholder="email"><br>
+      <input type="submit" value="create new user">
+    </form>
+  </div>
+<!-- </div> -->
