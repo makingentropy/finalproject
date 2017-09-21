@@ -47,30 +47,35 @@ app.controller("appjsController", ['$http', function($http){
       }).catch(error=>console.log(error));
     };
 
-    this.updateUsers = function(){
+    this.updateUser = function(){
+      console.log("userName: controller.userName",);
+      console.log("userEmail: controller.userEmail",);
+
       $http({
         method: 'PUT',
         url: 'http://flowtracker-backend.herokuapp.com/links/' + this.theUserSelected.id,
         data:{
           user:{
-            username:controller.user_username,
-            email:controller.user_email
+            username:controller.userName,
+            email:controller.userEmail
           }
         }
       }).then(function(response){
           console.log("user updated: ",response.data);
-          controller.pageShowing='includes/dynamic_getAllLinks.html'
+          controller.ReadOneSubShowing="0";
+          controller.pageShowing='includes/dynamic_getAllUsers.html';
       }).catch(error=>console.log(error));
     };
 
     this.deleteUser = function(){
-    console.log("delete this? ",this.theRequesterUser);
+    console.log("delete this? ",this.theUserSelected);
       $http({
         method: 'DELETE',
         url: 'http://flowtracker-backend.herokuapp.com/users/' + this.theUserSelected.id,
       }).then(function(response){
         console.log(response);
-
+        controller.ReadOneSubShowing="0";
+        controller.pageShowing='includes/dynamic_getAllUsers.html';
       }, function(error){
         console.log('error');
       });
