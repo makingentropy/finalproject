@@ -4,9 +4,10 @@
       <input type="submit" value="Show all links">
     </form>
     <div class="listContainer">
-        <div ng-repeat="link in ctrl.allLinks track by $index" ng-mouseenter="hoverState = true" ng-mouseleave="hoverState = false" class="divListItem">
+        <div ng-repeat="link in ctrl.allLinks track by $index" class="divListItem">
           <div ng-click="ctrl.linkSelected(link)">
-            <div class="divListItem_header">{{link.url}}</div>
+            <iframe width="560" height="315" ng-src="{{link.url.replace('watch?v=', 'embed/')}}" frameborder="0" allowfullscreen></iframe>
+            <div class="divListItem_header">{{link.url.replace("watch?v=", "embed/")}}</div>
             <div>media type:{{link.media_type}}</div>
             <div class="">genre: {{link.genre}}</div>
           </div>

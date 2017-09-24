@@ -1,5 +1,12 @@
 const app = angular.module("AppJS",[]);
 
+app.config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+    'self',
+    'https://www.youtube.com/**'
+  ]);
+});
+
 app.controller("appjsController", ['$http', function($http){
   const controller = this;
   this.test="test good";

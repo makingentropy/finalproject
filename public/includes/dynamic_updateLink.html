@@ -24,6 +24,7 @@
     </div>
     <div ng-if="ctrl.ReadOneSubShowing=='update'" class="listContainer">
       <form class="" ng-submit="ctrl.updateLink()">
+        <iframe width="560" height="315" src="{{$sce.trustAsUrl(link.url)}}" frameborder="0" allowfullscreen></iframe>
         Update Link<br>
         url:<br>
         <input type="text" ng-model="ctrl.linkName" placeholder="{{ctrl.theLinkSelected.url}}"><br>
