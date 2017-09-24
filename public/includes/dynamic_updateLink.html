@@ -6,25 +6,29 @@
       <div>media type: {{ctrl.theLinkSelected.media_type}}</div>
       <div>genre: {{ctrl.theLinkSelected.genre}}</div>
     </div>
-    <div class=""></div><br><br>
-    <div ng-if="ctrl.ReadOneSubShowing!='delete'">
-      <span class="glyphicon glyphicon-trash" ng-click="ctrl.ReadOneSubShowing='delete'"><span>
-      <br><br>
+    <br><br>
+    <span ng-if="ctrl.ReadOneSubShowing!='delete'" class="glyphicon glyphicon-trash" ng-click="ctrl.ReadOneSubShowing='delete'"></span>
+    <span ng-if="ctrl.ReadOneSubShowing!='update'" class="glyphicon glyphicon-list-alt" ng-click="ctrl.ReadOneSubShowing='update'"></span>
+    <!-- <div ng-if="ctrl.ReadOneSubShowing!='delete'"> -->
       <!-- <a ng-click="ctrl.ReadOneSubShowing='delete'">
           delete link
       </a><br><br> -->
-    </div>
+    <!-- </div> -->
     <div ng-if="ctrl.ReadOneSubShowing=='delete'" class="listContainer">
         Are you sure?<br><br>
         <form class="" ng-submit="ctrl.deleteLink()">
           <input type="submit" value="Delete this link">
         </form>
+        <form class="" ng-submit="ctrl.ReadOneSubShowing='none'">
+          <input type="submit" value="cancel">
+        </form>
     </div>
-    <div ng-if="ctrl.ReadOneSubShowing!='update'">
-      <a ng-click="ctrl.ReadOneSubShowing='update'"><br>
+
+    <!-- <div ng-if="ctrl.ReadOneSubShowing!='update'"> -->
+      <!-- <a ng-click="ctrl.ReadOneSubShowing='update'"><br>
           update link
-      </a>
-    </div>
+      </a> -->
+    <!-- </div> -->
     <div ng-if="ctrl.ReadOneSubShowing=='update'" class="listContainer">
       <form class="" ng-submit="ctrl.updateLink()">
         Update Link<br>
@@ -35,6 +39,9 @@
         genre:<br>
         <input type="text" ng-model="ctrl.linkGenre" placeholder="{{ctrl.theLinkSelected.url}}"><br>
         <input type="submit" value="update this link">
+      </form>
+      <form class="" ng-submit="ctrl.ReadOneSubShowing='none'">
+        <input type="submit" value="cancel">
       </form>
     </div>
   </div>
