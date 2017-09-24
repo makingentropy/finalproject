@@ -14,3 +14,14 @@
   -moz-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
   box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
 }
+.glyphicon-trash{
+  color: black;
+  font-size: 3em;
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+}
+.glyphicon-trash:hover{
+  color: red;
+  -webkit-transform: scale(2,2);
+  transform: scale(2,2);
+}

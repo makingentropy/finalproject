@@ -1,15 +1,18 @@
 <div ng-if="ctrl.pageShowing=='includes/dynamic_updateLink.html'">
   <div class="listContainer">
     <div>
+      <iframe width="560" height="315" ng-src="{{link.url.replace('watch?v=', 'embed/')}}" frameborder="0" allowfullscreen></iframe>
       <div>url: {{ctrl.theLinkSelected.url}}</div>
       <div>media type: {{ctrl.theLinkSelected.media_type}}</div>
       <div>genre: {{ctrl.theLinkSelected.genre}}</div>
     </div>
     <div class=""></div><br><br>
     <div ng-if="ctrl.ReadOneSubShowing!='delete'">
-      <a ng-click="ctrl.ReadOneSubShowing='delete'">
+      <span class="glyphicon glyphicon-trash" ng-click="ctrl.ReadOneSubShowing='delete'"><span>
+      <br><br>
+      <!-- <a ng-click="ctrl.ReadOneSubShowing='delete'">
           delete link
-      </a><br><br>
+      </a><br><br> -->
     </div>
     <div ng-if="ctrl.ReadOneSubShowing=='delete'" class="listContainer">
         Are you sure?<br><br>
@@ -24,7 +27,6 @@
     </div>
     <div ng-if="ctrl.ReadOneSubShowing=='update'" class="listContainer">
       <form class="" ng-submit="ctrl.updateLink()">
-        <iframe width="560" height="315" src="{{$sce.trustAsUrl(link.url)}}" frameborder="0" allowfullscreen></iframe>
         Update Link<br>
         url:<br>
         <input type="text" ng-model="ctrl.linkName" placeholder="{{ctrl.theLinkSelected.url}}"><br>
