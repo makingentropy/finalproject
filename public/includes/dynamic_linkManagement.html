@@ -7,7 +7,7 @@
 <div ng-include="'includes/dynamic_createLink.html'"></div>
 <!-- <div ng-if="ctrl.pageShowing=='includes/dynamic_getAllLinks.html'"> -->
 
-    <div class="listContainer">
+    <div class="listContainer2">
         <div ng-repeat="link in ctrl.allLinks track by $index" class="divListItem tubes">
           <div ng-click="ctrl.linkSelected(link)">
             <iframe width="560" height="315" ng-src="{{link.url.replace('watch?v=', 'embed/')}}" frameborder="0" allowfullscreen></iframe>
