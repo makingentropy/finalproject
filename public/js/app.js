@@ -13,6 +13,7 @@ app.controller("appjsController", ['$http', function($http){
   this.pageShowing='includes/dynamic_createMedia.html';
   this.theLinkSelected={};
   this.theUserSelected={};
+  this.userPass={};
   this.userReg={};
   this.loggedIn=false;
   this.showRegisterForm=false;
@@ -34,10 +35,10 @@ app.controller("appjsController", ['$http', function($http){
   ///////////////AUTHENTICATION:
 //////////////////////////////////////////////////////////////
 this.login = function(userPass) {
-  console.log(userPass);
+  console.log("userPass: ",userPass);
   $http({
      method: 'POST',
-     url: 'http://flowtracker-backend.herokuapp.com/users/login',
+     url: 'https://flowtracker-backend.herokuapp.com/users/login',
      data: {
        user: {
          username: userPass.username,
@@ -52,7 +53,7 @@ this.registration=function(userReg){
   console.log("userReg: ",userReg);
   $http({
     method: 'POST',
-    url: 'http://flowtracker-backend.herokuapp.com/users',
+    url: 'https://flowtracker-backend.herokuapp.com/users',
     data:{
       user:{
         // name:controller.elderName,
