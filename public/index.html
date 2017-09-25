@@ -13,27 +13,28 @@
 
   </head>
   <body ng-controller="appjsController as ctrl">
-    <!-- TESTING -->
-    <!-- {{ctrl.test}} -->
-    <!-- HEADER -->
-    <div ng-include="'includes/static_nav.html'"></div>
-    <div class="content">
-      <!-- REQUESTS: -->
-      <!-- <div ng-include="'includes/dynamic_createUser.html'"></div><br><br> -->
-      <!-- <div ng-include="'includes/dynamic_getAllUsers.html'"></div><br><br> -->
-      <div ng-include="'includes/dynamic_updateUser.html'"></div><br><br>
+      <!-- TESTING -->
+      <!-- {{ctrl.test}} -->
+      <!-- HEADER -->
+      <div id="navvy" ng-include="'includes/static_nav.html'"></div>
+      <div class="content">
+        <!-- REQUESTS: -->
+        <!-- <div ng-include="'includes/dynamic_createUser.html'"></div><br><br> -->
+        <!-- <div ng-include="'includes/dynamic_getAllUsers.html'"></div><br><br> -->
+        <div ng-include="'includes/dynamic_updateUser.html'"></div><br><br>
 
 
-      <div id="links_controls">
-        <div class="linkManagement listContainer" ng-include="'includes/dynamic_showLinksControl.html'"></div>
-        <div class="linkManagement" ng-include="'includes/dynamic_createLink.html'"></div><br><br>
+        <div id="links_controls">
+          <div class="linkManagement listContainer" ng-include="'includes/dynamic_linkManagement.html'"></div>
+        </div>
+        <div id="displaySeparator"/>
+        <br>
+        <div id="links_displayAndUpdate">
+          <div ng-include="'includes/dynamic_getAllLinks.html'"></div><br><br>
+          <div ng-include="'includes/dynamic_updateLink.html'"></div><br><br>
+        </div>
+        <!-- FOOTER -->
+        <div ng-include="'includes/static_footer.html'"></div>
       </div>
-
-      <br>
-      <div ng-include="'includes/dynamic_getAllLinks.html'"></div><br><br>
-      <div ng-include="'includes/dynamic_updateLink.html'"></div><br><br>
-    </div>
-    <!-- FOOTER -->
-    <div ng-include="'includes/static_footer.html'"></div>
   </body>
 </html>

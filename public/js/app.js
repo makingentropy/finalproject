@@ -39,7 +39,8 @@ this.login=function(userPass){
   console.log("userPass: ",userPass);
   $http({
      method: 'POST',
-     url: 'https://flowtracker-backend.herokuapp.com/users/login',
+     url: 'http://flowtracker-backend.herokuapp.com/users/login',
+      // url: 'http://localhost:3000/users/login',
      data: {
        user: {
          username: userPass.username,
@@ -94,7 +95,7 @@ this.registration=function(userReg){
     this.getUsers = function(){
       $http({
         method: 'GET',
-        url: 'http://flowtracker-backend.herokuapp.com/users'
+        url: 'https://flowtracker-backend.herokuapp.com/users'
       }).then(function(response){
           console.log("users retrieved: ",response.data);
           controller.allUsers=response.data;
@@ -107,7 +108,7 @@ this.registration=function(userReg){
 
       $http({
         method: 'PUT',
-        url: 'http://flowtracker-backend.herokuapp.com/users/' + this.theUserSelected.id,
+        url: 'https://flowtracker-backend.herokuapp.com/users/' + this.theUserSelected.id,
         data:{
           user:{
             username:controller.userName,
@@ -125,7 +126,7 @@ this.registration=function(userReg){
     console.log("delete this? ",this.theUserSelected);
       $http({
         method: 'DELETE',
-        url: 'http://flowtracker-backend.herokuapp.com/users/' + this.theUserSelected.id,
+        url: 'https://flowtracker-backend.herokuapp.com/users/' + this.theUserSelected.id,
       }).then(function(response){
         console.log(response);
         controller.ReadOneSubShowing="0";
@@ -143,7 +144,7 @@ this.registration=function(userReg){
   this.postLinks = function(){
     $http({
       method: 'POST',
-      url: 'http://flowtracker-backend.herokuapp.com/links',
+      url: 'https://flowtracker-backend.herokuapp.com/links',
       data:{
         link:{
           url:controller.link_url,
@@ -159,7 +160,7 @@ this.registration=function(userReg){
   this.getLinks = function(){
     $http({
       method: 'GET',
-      url: 'http://flowtracker-backend.herokuapp.com/links'
+      url: 'https://flowtracker-backend.herokuapp.com/links'
     }).then(function(response){
         console.log("links retrieved: ",response.data);
         controller.allLinks=response.data;
@@ -169,7 +170,7 @@ this.registration=function(userReg){
   this.updateLink = function(){
     $http({
       method: 'PUT',
-      url: 'http://flowtracker-backend.herokuapp.com/links/' + this.theLinkSelected.id,
+      url: 'https://flowtracker-backend.herokuapp.com/links/' + this.theLinkSelected.id,
       data:{
         link:{
           url:controller.linkName,
@@ -188,7 +189,7 @@ this.registration=function(userReg){
   console.log("delete this? ",this.theLinkSelected);
     $http({
       method: 'DELETE',
-      url: 'http://flowtracker-backend.herokuapp.com/links/' + this.theLinkSelected.id,
+      url: 'https://flowtracker-backend.herokuapp.com/links/' + this.theLinkSelected.id,
     }).then(function(response){
       console.log("response: ",response);
       controller.ReadOneSubShowing="0";

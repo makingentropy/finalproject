@@ -1,39 +1,28 @@
+body{
+  background:#000000;
+}
 a{
   text-decoration: none;
 }
 a:hover{
   text-decoration: none;
 }
-.content{
-  display: flex;
-}
-.marker{
-  font-family: 'Permanent Marker', cursive;
-}
-.linkManagement{
-  width:49%;
-}
-.siteName{
-  font-size:2.25em;
-  color: black;
-  text-decoration: none;
-}
-.siteName:hover{
-  text-decoration: none;
-}
-.title{
-  text-shadow: 4px 4px 4px #e6caff;
-  font-size:2em;
-}
-.listContainer{
-  border: 1px solid #999999;
-  margin-top: 1em;
-  padding: 2em 3em 3em 3em;
+.btn{
+  padding:1em;
+  background-color:#FFFFFF;
   -webkit-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
   -moz-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
   box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
 }
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-image: url(../images/damaged2.jpg);
+}
 .divListItem{
+  width:100%;
   margin-top: 1em;
   border: 1px solid #CCCCCC;
   padding:1.33em;
@@ -63,10 +52,54 @@ a:hover{
   -webkit-transform: scale(1.5,1.5);
   transform: scale(1.5,1.5);
 }
+.linkManagement{
+  margin-left: 10%;
+  width:800px;
+}
+.listContainer{
+  border: 1px solid #999999;
+  margin-top: 1em;
+  padding: 2em 3em 3em 3em;
+  background-color: rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
+  -moz-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
+  box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
+}
+.marker{
+  font-family: 'Permanent Marker', cursive;
+}
+.siteName{
+  font-size:2.25em;
+  color: black;
+  text-decoration: none;
+}
+.siteName:hover{
+  text-decoration: none;
+}
+.title{
+  text-shadow: 4px 4px 4px #e6caff;
+  font-size:2em;
+}
+.tubes{
+  background: url(../images/wall1.jpg);
+}
+#displaySeparator{
+  height:3px;
+  width:100%;
+  background-color: #000;
+}
 #getAllLinks{
   width:100%;
 }
 #links_Controls{
   width:100%;
-  
+}
+#links_displayAndUpdate{
+  width:100%;
+}
+#navvy{
+  background: url(../images/wall2.jpg);
+  -webkit-box-shadow: 10px 10px 50px 10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 50px 10px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 50px 10px rgba(0,0,0,0.75);
 }
