@@ -1,3 +1,30 @@
+a{
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: none;
+}
+.content{
+  display: flex;
+}
+.marker{
+  font-family: 'Permanent Marker', cursive;
+}
+.linkManagement{
+  width:49%;
+}
+.siteName{
+  font-size:2.25em;
+  color: black;
+  text-decoration: none;
+}
+.siteName:hover{
+  text-decoration: none;
+}
+.title{
+  text-shadow: 4px 4px 4px #e6caff;
+  font-size:2em;
+}
 .listContainer{
   border: 1px solid #999999;
   margin-top: 1em;
@@ -35,4 +62,11 @@
   color:blue;
   -webkit-transform: scale(1.5,1.5);
   transform: scale(1.5,1.5);
+}
+#getAllLinks{
+  width:100%;
+}
+#links_Controls{
+  width:100%;
+  
 }

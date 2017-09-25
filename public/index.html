@@ -9,24 +9,30 @@
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 
   </head>
   <body ng-controller="appjsController as ctrl">
     <!-- TESTING -->
-    {{ctrl.test}}
+    <!-- {{ctrl.test}} -->
     <!-- HEADER -->
     <div ng-include="'includes/static_nav.html'"></div>
+    <div class="content">
+      <!-- REQUESTS: -->
+      <!-- <div ng-include="'includes/dynamic_createUser.html'"></div><br><br> -->
+      <!-- <div ng-include="'includes/dynamic_getAllUsers.html'"></div><br><br> -->
+      <div ng-include="'includes/dynamic_updateUser.html'"></div><br><br>
 
-    <!-- REQUESTS: -->
-    <div ng-include="'includes/dynamic_createUser.html'"></div><br><br>
-    <div ng-include="'includes/dynamic_getAllUsers.html'"></div><br><br>
-    <div ng-include="'includes/dynamic_updateUser.html'"></div><br><br>
 
-    <div ng-include="'includes/dynamic_createLink.html'"></div><br><br>
-    <div ng-include="'includes/dynamic_getAllLinks.html'"></div><br><br>
-    <div ng-include="'includes/dynamic_updateLink.html'"></div><br><br>
+      <div id="links_controls">
+        <div class="linkManagement listContainer" ng-include="'includes/dynamic_showLinksControl.html'"></div>
+        <div class="linkManagement" ng-include="'includes/dynamic_createLink.html'"></div><br><br>
+      </div>
 
+      <br>
+      <div ng-include="'includes/dynamic_getAllLinks.html'"></div><br><br>
+      <div ng-include="'includes/dynamic_updateLink.html'"></div><br><br>
+    </div>
     <!-- FOOTER -->
     <div ng-include="'includes/static_footer.html'"></div>
   </body>

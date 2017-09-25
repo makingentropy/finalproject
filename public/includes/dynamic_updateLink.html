@@ -7,13 +7,10 @@
       <div>genre: {{ctrl.theLinkSelected.genre}}</div>
     </div>
     <br><br>
+    <!-- GLYPHS: -->
     <span ng-if="ctrl.ReadOneSubShowing!='delete'" class="glyphicon glyphicon-trash" ng-click="ctrl.ReadOneSubShowing='delete'"></span>
     <span ng-if="ctrl.ReadOneSubShowing!='update'" class="glyphicon glyphicon-list-alt" ng-click="ctrl.ReadOneSubShowing='update'"></span>
-    <!-- <div ng-if="ctrl.ReadOneSubShowing!='delete'"> -->
-      <!-- <a ng-click="ctrl.ReadOneSubShowing='delete'">
-          delete link
-      </a><br><br> -->
-    <!-- </div> -->
+    <!-- DELETE: -->
     <div ng-if="ctrl.ReadOneSubShowing=='delete'" class="listContainer">
         Are you sure?<br><br>
         <form class="" ng-submit="ctrl.deleteLink()">
@@ -23,12 +20,7 @@
           <input type="submit" value="cancel">
         </form>
     </div>
-
-    <!-- <div ng-if="ctrl.ReadOneSubShowing!='update'"> -->
-      <!-- <a ng-click="ctrl.ReadOneSubShowing='update'"><br>
-          update link
-      </a> -->
-    <!-- </div> -->
+    <!-- UPDATE: -->
     <div ng-if="ctrl.ReadOneSubShowing=='update'" class="listContainer">
       <form class="" ng-submit="ctrl.updateLink()">
         Update Link<br>

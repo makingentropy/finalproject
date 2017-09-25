@@ -13,6 +13,10 @@ app.controller("appjsController", ['$http', function($http){
   this.pageShowing='includes/dynamic_createMedia.html';
   this.theLinkSelected={};
   this.theUserSelected={};
+  this.userReg={};
+  this.loggedIn=false;
+  this.showRegisterForm=false;
+
 
   this.userSelected=function(theUser){
     //RENDER the following includes/*.html on index.html
@@ -27,22 +31,63 @@ app.controller("appjsController", ['$http', function($http){
     this.theLinkSelected=theLink;
   };
   /////////////////////////////////////////////////////////////
+  ///////////////AUTHENTICATION:
+//////////////////////////////////////////////////////////////
+this.login = function(userPass) {
+  console.log(userPass);
+  $http({
+     method: 'POST',
+     url: 'http://flowtracker-backend.herokuapp.com/users/login',
+     data: {
+       user: {
+         username: userPass.username,
+         password: userPass.password
+       }
+     }
+   }).then(function(response) {
+     console.log(response);
+   });
+}
+this.registration=function(userReg){
+  console.log("userReg: ",userReg);
+  $http({
+    method: 'POST',
+    url: 'http://flowtracker-backend.herokuapp.com/users',
+    data:{
+      user:{
+        // name:controller.elderName,
+        email:controller.elderEmail,
+        username:userReg.username,
+        password:userReg.password
+      }
+    }
+  }).then(function(response){
+    console.log("Account created");
+    console.log(response.data);
+    controller.loggedIn=true;
+    self.user=userReg.username;
+  }), function(error){console.log("ERROR: ",error); }
+};
+//////////////////////////////////////////////////////////////////////////
+////////////////: END AUTHENTICATION
+
+  /////////////////////////////////////////////////////////////
   ///////////////USER CRUD:
 //////////////////////////////////////////////////////////////
-  this.postUsers = function(){
-    $http({
-      method: 'POST',
-      url: 'http://flowtracker-backend.herokuapp.com/users',
-      data:{
-        user:{
-          username:controller.user_username,
-          email:controller.user_email
-        }
-      }
-    }).then(function(response){
-      console.log("user posted: ",response.data);
-    }).catch(error=>console.log(error));
-  };
+  // this.postUsers = function(){
+  //   $http({
+  //     method: 'POST',
+  //     url: 'http://flowtracker-backend.herokuapp.com/users',
+  //     data:{
+  //       user:{
+  //         username:controller.user_username,
+  //         email:controller.user_email
+  //       }
+  //     }
+  //   }).then(function(response){
+  //     console.log("user posted: ",response.data);
+  //   }).catch(error=>console.log(error));
+  // };
 
     this.getUsers = function(){
       $http({

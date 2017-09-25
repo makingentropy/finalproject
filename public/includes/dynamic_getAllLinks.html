@@ -1,8 +1,6 @@
+
 <!-- <div ng-if="ctrl.pageShowing=='includes/dynamic_getAllLinks.html'"> -->
-  <div>All Links: <br><br>
-    <form class="" ng-submit="ctrl.getLinks()">
-      <input type="submit" value="Show all links">
-    </form>
+  <div id="getAllLinks">All Links: <br><br>
     <div class="listContainer">
         <div ng-repeat="link in ctrl.allLinks track by $index" class="divListItem">
           <div ng-click="ctrl.linkSelected(link)">
