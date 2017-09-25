@@ -8,6 +8,7 @@ a:hover{
   text-decoration: none;
 }
 .btn{
+  margin-top: .5em;
   padding:1em;
   background-color:#FFFFFF;
   -webkit-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
