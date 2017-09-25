@@ -34,7 +34,8 @@ app.controller("appjsController", ['$http', function($http){
   /////////////////////////////////////////////////////////////
   ///////////////AUTHENTICATION:
 //////////////////////////////////////////////////////////////
-this.login = function(userPass) {
+this.login=function(userPass){
+  console.log("in login function");
   console.log("userPass: ",userPass);
   $http({
      method: 'POST',
