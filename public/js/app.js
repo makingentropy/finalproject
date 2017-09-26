@@ -102,12 +102,21 @@ this.registration=function(userReg){
     this.getUsers = function(){
       $http({
         method: 'GET',
-        url: 'https://flowtracker-backend.herokuapp.com/users'
+        url: 'https://flowtracker-backend.herokuapp.com/users',
+        headers: {
+          'Authorization': 'Bearer ' + JSON.parse(localStorage.getItem('token'))
+        }
       }).then(function(response){
           console.log("users retrieved: ",response.data);
           controller.allUsers=response.data;
-          this.error="Unauthorized";
-      }.bind(this)).catch(error=>console.log(error));
+          if (response.data.status == 401) {
+            this.error = "Unauthorized";
+          } else {
+            this.users = response.data;
+          }
+      }.bind(this), function(error){
+        console.log('error');
+      });
     };
 
     this.updateUser = function(){

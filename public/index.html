@@ -33,8 +33,13 @@
           <!-- <div ng-include="'includes/dynamic_getAllLinks.html'"></div><br><br> -->
           <div ng-include="'includes/dynamic_updateLink.html'"></div><br><br>
         </div>
+
         <span class="marker markerColor2" ng-click="ctrl.getUsers()">CLICK 4 SECRETS</span>
         <div>{{ctrl.error}}</div>
+        <div ng-repeat="user in ctrl.users">
+          <span class="marker markerColor1B">{{user.username}}, &nbsp;</span>
+        </div>
+
         <!-- FOOTER -->
         <div id="foot" ng-include="'includes/static_footer.html'"></div>
       </div>
