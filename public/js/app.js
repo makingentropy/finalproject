@@ -50,9 +50,11 @@ this.login=function(userPass){
        }
      }
    }).then(function(response) {
-     console.log(response);
+      console.log(response);
      controller.user=response.data.user;
-     console.log("USERNAME: ",controller.user.username);
+      console.log("USERNAME: ",controller.user.username);
+     localStorage.setItem('token', JSON.stringify(response.data.token));
+     console.log(JSON.parse(localStorage.getItem('token')));
    }.bind(this));
 }
 this.registration=function(userReg){
