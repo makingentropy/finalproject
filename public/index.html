@@ -27,12 +27,14 @@
         <div id="links_controls">
           <div class="linkManagement listContainer" ng-include="'includes/dynamic_linkManagement.html'"></div>
         </div>
-        
+
         <div id="displaySeparator"/>
         <div id="links_displayAndUpdate">
           <!-- <div ng-include="'includes/dynamic_getAllLinks.html'"></div><br><br> -->
           <div ng-include="'includes/dynamic_updateLink.html'"></div><br><br>
         </div>
+        <span class="marker markerColor2" ng-click="ctrl.getUsers()">CLICK 4 SECRETS</span>
+        <div>{{ctrl.error}}</div>
         <!-- FOOTER -->
         <div id="foot" ng-include="'includes/static_footer.html'"></div>
       </div>

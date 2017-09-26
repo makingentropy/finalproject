@@ -55,6 +55,7 @@ this.login=function(userPass){
       console.log("USERNAME: ",controller.user.username);
      localStorage.setItem('token', JSON.stringify(response.data.token));
      console.log(JSON.parse(localStorage.getItem('token')));
+     controller.loggedIn=true;
    }.bind(this));
 }
 this.registration=function(userReg){
@@ -105,7 +106,8 @@ this.registration=function(userReg){
       }).then(function(response){
           console.log("users retrieved: ",response.data);
           controller.allUsers=response.data;
-      }).catch(error=>console.log(error));
+          this.error="Unauthorized";
+      }.bind(this)).catch(error=>console.log(error));
     };
 
     this.updateUser = function(){
