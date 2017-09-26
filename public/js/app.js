@@ -34,6 +34,8 @@ app.controller("appjsController", ['$http', function($http){
   /////////////////////////////////////////////////////////////
   ///////////////AUTHENTICATION:
 //////////////////////////////////////////////////////////////
+this.user = {};
+
 this.login=function(userPass){
   console.log("in login function");
   console.log("userPass: ",userPass);
@@ -49,7 +51,9 @@ this.login=function(userPass){
      }
    }).then(function(response) {
      console.log(response);
-   });
+     controller.user=response.data.user;
+     console.log("USERNAME: ",controller.user.username);
+   }.bind(this));
 }
 this.registration=function(userReg){
   console.log("userReg: ",userReg);
