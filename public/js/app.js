@@ -74,8 +74,8 @@ this.registration=function(userReg){
   }).then(function(response){
     console.log("Account created");
     console.log(response.data);
-    controller.loggedIn=true;
-    self.user=userReg.username;
+    self.user=userReg.username; //I think I copied this from instructions but I don't get the purpose of this line
+    controller.login(userReg);
   }), function(error){console.log("ERROR: ",error); }
 };
 //////////////////////////////////////////////////////////////////////////
