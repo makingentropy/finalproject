@@ -6,6 +6,7 @@ a{
 }
 a:hover{
   text-decoration: none;
+  color:#00E0F2;
 }
 .btn{
   margin-top: .5em;
@@ -21,6 +22,7 @@ a:hover{
   align-content: center;
   background-color: rgba(0, 0, 0, 0.5);
   background-image: url(../images/damaged2.jpg);
+  padding-bottom: 1em;
 }
 .divListItem{
   width:100%;
@@ -61,7 +63,7 @@ a:hover{
   border: 1px solid #e6caff;
   margin-top: 1em;
   padding: 2em 3em 3em 3em;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(120, 120, 120, 0.5);
   -webkit-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
   -moz-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
   box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
@@ -87,8 +89,16 @@ a:hover{
 .marker{
   font-family: 'Permanent Marker', cursive;
 }
+.markerColor1{
+  color: #FFFFFF;
+  font-size: 1.5em;
+}
 .markerColor2{
   color: #e6caff;
+  font-size: 1.5em;
+}
+.markerColor2:hover{
+  color: #00E0F2;
   font-size: 1.5em;
 }
 .siteName{
@@ -111,18 +121,30 @@ a:hover{
   width:100%;
   background-color: #000;
 }
+#foot{
+  background: #000;
+  padding-top:5%;
+  padding-bottom:5%;
+  width:100%;
+}
 #getAllLinks{
   width:100%;
 }
 #links_Controls{
   width:100%;
+  margin-bottom: 1em;
 }
 #links_displayAndUpdate{
   width:100%;
+  background-color: #000;
 }
 #navvy{
-  background: url(../images/wall2.jpg);
+  background: url(../images/wall1.jpg);
+  background-position: right 0px bottom 480px;
+  border: 3px solid black;
   -webkit-box-shadow: 10px 10px 50px 10px rgba(0,0,0,0.75);
   -moz-box-shadow: 10px 10px 50px 10px rgba(0,0,0,0.75);
   box-shadow: 10px 10px 50px 10px rgba(0,0,0,0.75);
+  padding-bottom: 1em;
+  padding-left:1em;
 }

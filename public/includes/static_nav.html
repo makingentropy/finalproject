@@ -2,24 +2,31 @@
 <div ng-if="ctrl.loggedIn==false">
   <div ng-if="ctrl.showRegisterForm==false">
     <form ng-submit="ctrl.login(userPass)">
+      <span class="marker markerColor1">
+      Login:
+      </span>
         <input type="text" ng-model="userPass.username" placeholder="username"/>
         <input type="password" ng-model="userPass.password" placeholder="password"/>
         <input type="submit"/>
+        <span class="marker markerColor2" ng-click="ctrl.showRegisterForm=true;">
+        &nbsp;&nbsp;&nbsp;&nbsp;  or Register
+        </span>
     </form>
-    <a ng-click="ctrl.showRegisterForm=true;">
-        Register
-    </a>
+
   </div>
   <div ng-if="ctrl.showRegisterForm==true">
-    <a ng-click="ctrl.showRegisterForm=false;">
-        Login
-    </a>
     <form ng-submit="ctrl.registration(userReg)">
       <!-- <input type="text" ng-model="userReg.name" placeholder="name"/> -->
+      <span class="marker markerColor1">
+      Register:
+      </span>
       <input type="text" ng-model="userReg.email" placeholder="email"/>
       <input type="text" ng-model="userReg.username" placeholder="username"/>
       <input type="password" ng-model="userReg.password" placeholder="password"/>
       <input type="submit"/>
+      <span class="marker markerColor2" ng-click="ctrl.showRegisterForm=false;">
+      &nbsp;&nbsp;&nbsp;&nbsp;  or Login
+      </span>
     </form>
   </div>
 </div>
