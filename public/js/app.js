@@ -82,23 +82,13 @@ this.registration=function(userReg){
 ////////////////: END AUTHENTICATION
 
   /////////////////////////////////////////////////////////////
-  ///////////////USER CRUD:
+  ///////////////Rest of USER CRUD:
 //////////////////////////////////////////////////////////////
-  // this.postUsers = function(){
-  //   $http({
-  //     method: 'POST',
-  //     url: 'http://flowtracker-backend.herokuapp.com/users',
-  //     data:{
-  //       user:{
-  //         username:controller.user_username,
-  //         email:controller.user_email
-  //       }
-  //     }
-  //   }).then(function(response){
-  //     console.log("user posted: ",response.data);
-  //   }).catch(error=>console.log(error));
-  // };
-
+    this.logout=function(){
+      localStorage.clear('token');
+      location.reload();
+      controller.loggedIn=false;
+    }
     this.getUsers = function(){
       $http({
         method: 'GET',
