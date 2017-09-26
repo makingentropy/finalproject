@@ -39,7 +39,7 @@ this.login=function(userPass){
   console.log("userPass: ",userPass);
   $http({
      method: 'POST',
-     url: 'http://flowtracker-backend.herokuapp.com/users/login',
+     url: 'https://flowtracker-backend.herokuapp.com/users/login',
       // url: 'http://localhost:3000/users/login',
      data: {
        user: {
