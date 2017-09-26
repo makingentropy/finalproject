@@ -22,7 +22,8 @@ a:hover{
   align-content: center;
   background-color: rgba(0, 0, 0, 0.5);
   background-image: url(../images/damaged2.jpg);
-  padding-bottom: 1em;
+  padding-top:180px;
+
 }
 .divListItem{
   width:100%;
@@ -147,4 +148,6 @@ a:hover{
   box-shadow: 10px 10px 50px 10px rgba(0,0,0,0.75);
   padding-bottom: 1em;
   padding-left:1em;
+  width:100%;
+  z-index: 10; position: absolute;
 }
