@@ -64,15 +64,18 @@ a:hover{
   /*margin-left: 10%;*/
 
 }
+.linkstats{
+  width:100%;
+}
 .listContainer{
   width:50%;
-  border: 1px solid #e6caff;
+  /*border: 1px solid #e6caff;*/
   /*margin-top: 1em;*/
   /*padding: 2em 3em 3em 3em;*/
-  background-color: rgba(120, 120, 120, 0.5);
+  /*background-color: rgba(120, 120, 120, 0.5);
   -webkit-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
   -moz-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
-  box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
+  box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);*/
   display:inline-flex;
   justify-content: space-evenly;
 }
@@ -130,6 +133,12 @@ a:hover{
 .tubes{
   color:white;
   background: url(../images/wall1.jpg);
+}
+.vid{
+  width:100%;
+}
+.videoHolder{
+
 }
 #displaySeparator{
   height:3px;
