@@ -9,6 +9,9 @@ a:hover{
   text-decoration: none;
   color:#00E0F2;
 }
+.blackLetters{
+  color:black;
+}
 .btn{
   margin-top: .5em;
   padding:1em;
@@ -69,7 +72,7 @@ a:hover{
 }
 .listContainerX{
   color:white;
-  width:50%;
+  width:100%;
   /*border: 1px solid #e6caff;*/
   /*margin-top: 1em;*/
   /*padding: 2em 3em 3em 3em;*/
@@ -130,6 +133,11 @@ a:hover{
 .markerColor2:hover{
   color: #00E0F2;
   font-size: 1.5em;
+}
+.openWide{
+  width:100%;
+  display: inline-flex;
+  justify-content: space-evenly;
 }
 .siteName{
   font-size:2.25em;

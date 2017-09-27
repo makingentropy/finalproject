@@ -24,22 +24,11 @@
         <!-- <div ng-include="'includes/dynamic_getAllUsers.html'"></div><br><br> -->
         <div ng-include="'includes/dynamic_updateUser.html'"></div><br><br>
 
-
         <div id="links_controls">
           <div class="listContainer" ng-include="'includes/dynamic_linkManagement.html'"></div>
         </div>
-        <div class="listContainer2">
-            <div ng-repeat="link in ctrl.allLinks track by $index" class="divListItem tubes">
-              <div class="videoHolder" ng-click="ctrl.linkSelected(link)">
-                <iframe width="560" height="315" ng-src="{{link.url.replace('watch?v=', 'embed/')}}" frameborder="0" allowfullscreen class="vid"></iframe>
-                <div class="linkstats">
-                  <div class="divListItem_header">{{link.url.replace("watch?v=", "embed/")}}</div>
-                  <div>media type:{{link.media_type}}</div>
-                  <div class="">genre: {{link.genre}}</div>
-                </div>
-              </div>
-            </div>
-        </div>
+        <div class="openWide" ng-include="'includes/dynamic_listOfLinks.html'"></div>
+
 
         <div id="displaySeparator"/>
         <div id="links_displayAndUpdate">

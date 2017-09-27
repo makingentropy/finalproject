@@ -174,6 +174,7 @@ this.registration=function(userReg){
   };
 
   this.getLinks = function(){
+    controller.pageShowing='includes/dynamic_listOfLinks.html'
     $http({
       method: 'GET',
       url: 'https://flowtracker-backend.herokuapp.com/links'

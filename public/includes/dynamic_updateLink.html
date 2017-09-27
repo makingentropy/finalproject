@@ -14,10 +14,10 @@
     <div ng-if="ctrl.ReadOneSubShowing=='delete'" class="listContainer">
         Are you sure?<br><br>
         <form class="" ng-submit="ctrl.deleteLink()">
-          <input type="submit" value="Delete this link">
+          <input type="submit" value="Delete this link" class="blackLetters">
         </form>
         <form class="" ng-submit="ctrl.ReadOneSubShowing='none'">
-          <input type="submit" value="cancel">
+          <input type="submit" value="cancel" class="blackLetters">
         </form>
     </div>
     <!-- UPDATE: -->
@@ -25,15 +25,15 @@
       <form class="" ng-submit="ctrl.updateLink()">
         Update Link<br>
         url:<br>
-        <input type="text" ng-model="ctrl.linkName" placeholder="{{ctrl.theLinkSelected.url}}"><br>
+        <input type="text" ng-model="ctrl.linkName" placeholder="{{ctrl.theLinkSelected.url}}" class="blackLetters"><br>
         <br>media_type:<br>
-        <input type="text" ng-model="ctrl.linkMediaType" placeholder="{{ctrl.theLinkSelected.media_type}}"><br>
+        <input type="text" ng-model="ctrl.linkMediaType" placeholder="{{ctrl.theLinkSelected.media_type}}" class="blackLetters"><br>
         genre:<br>
-        <input type="text" ng-model="ctrl.linkGenre" placeholder="{{ctrl.theLinkSelected.url}}"><br>
-        <input type="submit" value="update this link">
+        <input type="text" ng-model="ctrl.linkGenre" placeholder="{{ctrl.theLinkSelected.url}}" class="blackLetters"><br>
+        <input type="submit" value="update this link" class="blackLetters">
       </form>
-      <form class="" ng-submit="ctrl.ReadOneSubShowing='none'">
-        <input type="submit" value="cancel">
+      <form class="blackLetters" ng-submit="ctrl.ReadOneSubShowing='none'">
+        <input type="submit" value="cancel" class="blackLetters">
       </form>
     </div>
   </div>
