@@ -60,6 +60,7 @@ this.login=function(userPass){
    }).then(function(response) {
       console.log(response);
      controller.user=response.data.user;
+     console.log("controller.user: ",controller.user);
       console.log("USERNAME: ",controller.user.username);
      localStorage.setItem('token', JSON.stringify(response.data.token));
      console.log(JSON.parse(localStorage.getItem('token')));
@@ -119,16 +120,17 @@ this.registration=function(userReg){
     };
 
     this.updateUser = function(){
-      console.log("userName: ",controller.userName);
-      console.log("userEmail: ",controller.userEmail);
+      console.log("username: ",controller.user.username);
+      console.log("email: ",controller.user.email);
+      console.log("id: ", controller.user.id);
 
       $http({
         method: 'PUT',
-        url: 'https://flowtracker-backend.herokuapp.com/users/' + this.theUserSelected.id,
+        url: 'https://flowtracker-backend.herokuapp.com/users/' + controller.user.id,
         data:{
           user:{
-            username:controller.userName,
-            email:controller.userEmail
+            username:controller.user.username,
+            email:controller.user.email
           }
         }
       }).then(function(response){
@@ -142,7 +144,7 @@ this.registration=function(userReg){
     console.log("delete this? ",this.theUserSelected);
       $http({
         method: 'DELETE',
-        url: 'https://flowtracker-backend.herokuapp.com/users/' + this.theUserSelected.id,
+        url: 'https://flowtracker-backend.herokuapp.com/users/' + controller.user.id,
       }).then(function(response){
         console.log(response);
         controller.ReadOneSubShowing="0";

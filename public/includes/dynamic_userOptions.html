@@ -1,6 +1,11 @@
-<div ng-if="ctrl.pageShowing=='includes/dynamic_userOptions.html'||ctrl.pageShowing=='includes/dynamic_showAllUsers.html'">
-  User Options for {{ctrl.user.username}}:<br><br>
-  <span ng-click="ctrl.getUsers()" class="marker markerColor2">Show All Users</span>
+<div ng-if="ctrl.pageShowing=='includes/dynamic_userOptions.html'||ctrl.pageShowing=='includes/dynamic_showAllUsers.html'||ctrl.pageShowing=='includes/dynamic_updateUser.html'">
+  <span class="marker">User Options for {{ctrl.user.username}}:</span><br><br>
+  <div class="openWide">
+    <span ng-click="ctrl.getUsers()" class="marker markerColor2">Show All Users</span>
+    <br><br>
+    <span ng-click="ctrl.pageShowing='includes/dynamic_updateUser.html'" class="marker markerColor2">Manage your Account</span>
 
+  </div>
+  <div ng-include="'includes/dynamic_updateUser.html'"></div>
   <div ng-include="'includes/dynamic_showAllUsers.html'"></div>
 </div>

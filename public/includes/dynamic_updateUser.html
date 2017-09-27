@@ -1,8 +1,8 @@
 <div ng-if="ctrl.pageShowing=='includes/dynamic_updateUser.html'">
   <div class="listContainer">
     <div>
-      <div>username: {{ctrl.theUserSelected.username}}</div>
-      <div>email: {{ctrl.theUserSelected.email}}</div>
+      <div>username: {{ctrl.user.username}}</div>
+      <div>email: {{ctrl.user.email}}</div>
     </div>
     <div class=""></div><br><br>
     <div ng-if="ctrl.ReadOneSubShowing!='delete'">
@@ -28,7 +28,7 @@
         <input type="text" ng-model="ctrl.userName" placeholder="{{ctrl.theUserSelected.username}}"><br>
         <br>email:<br>
         <input type="text" ng-model="ctrl.userEmail" placeholder="{{ctrl.theUserSelected.email}}"><br>
-        <input type="submit" value="update this user"> 
+        <input type="submit" value="update this user">
       </form>
     </div>
   </div>
