@@ -1,7 +1,7 @@
 <div ng-if="ctrl.pageShowing=='includes/dynamic_updateLink.html'">
-  <div class="listContainer">
+  <div class="listContainerX">
     <div>
-      <iframe width="560" height="315" ng-src="{{link.url.replace('watch?v=', 'embed/')}}" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" ng-src="{{ctrl.theLinkSelected.url.replace('watch?v=', 'embed/')}}" frameborder="0" allowfullscreen class="vid"></iframe>
       <div>url: {{ctrl.theLinkSelected.url}}</div>
       <div>media type: {{ctrl.theLinkSelected.media_type}}</div>
       <div>genre: {{ctrl.theLinkSelected.genre}}</div>

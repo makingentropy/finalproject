@@ -39,7 +39,7 @@ a:hover{
   box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
 }
 .glyphicon-trash{
-  color: black;
+  color: white;
   font-size: 3em;
   -webkit-transition: -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out;
@@ -50,7 +50,7 @@ a:hover{
   transform: scale(1.5,1.5);
 }
 .glyphicon-list-alt{
-  color:black;
+  color:white;
   font-size: 3em;
   -webkit-transition: -webkit-transform .3s ease-in-out;
   transition: transform .3s ease-in-out;
@@ -66,6 +66,19 @@ a:hover{
 }
 .linkstats{
   width:100%;
+}
+.listContainerX{
+  color:white;
+  width:50%;
+  /*border: 1px solid #e6caff;*/
+  /*margin-top: 1em;*/
+  /*padding: 2em 3em 3em 3em;*/
+  /*background-color: rgba(120, 120, 120, 0.5);
+  -webkit-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
+  -moz-box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);
+  box-shadow: 10px 10px 7px -8px rgba(0,0,0,0.24);*/
+  display:inline-flex;
+  justify-content: space-evenly;
 }
 .listContainer{
   width:50%;
