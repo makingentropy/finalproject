@@ -144,7 +144,7 @@ this.registration=function(userReg){
     console.log("delete this? ",this.theUserSelected);
       $http({
         method: 'DELETE',
-        url: 'https://flowtracker-backend.herokuapp.com/users/' + controller.user.id,
+        url: 'https://flowtracker-backend.herokuapp.com/users/' + controller.user.id,  
       }).then(function(response){
         console.log(response);
         controller.ReadOneSubShowing="0";
