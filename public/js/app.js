@@ -10,7 +10,7 @@ app.config(function($sceDelegateProvider) {
 app.controller("appjsController", ['$http', function($http){
   const controller = this;
   this.test="test good";
-  this.pageShowing='includes/dynamic_createMedia.html';
+  this.pageShowing='';
   this.theLinkSelected={};
   this.theUserSelected={};
   this.userPass={};
@@ -18,6 +18,14 @@ app.controller("appjsController", ['$http', function($http){
   this.loggedIn=false;
   this.showRegisterForm=false;
 
+  this.toggleCreateLinkForm=function(){
+    if(controller.pageShowing!='includes/dynamic_createLink.html'){
+      controller.pageShowing='includes/dynamic_createLink.html'
+    }else{
+      controller.pageShowing='';
+    }
+    console.log("pageShowing: ",controller.pageShowing);
+  };
 
   this.userSelected=function(theUser){
     //RENDER the following includes/*.html on index.html
@@ -90,6 +98,7 @@ this.registration=function(userReg){
       controller.loggedIn=false;
     }
     this.getUsers = function(){
+      controller.pageShowing='includes/dynamic_showAllUsers.html';
       $http({
         method: 'GET',
         url: 'https://flowtracker-backend.herokuapp.com/users',

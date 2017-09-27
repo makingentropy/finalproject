@@ -1,0 +1,6 @@
+<div ng-if="ctrl.pageShowing=='includes/dynamic_userOptions.html'||ctrl.pageShowing=='includes/dynamic_showAllUsers.html'">
+  User Options for {{ctrl.user.username}}:<br><br>
+  <span ng-click="ctrl.getUsers()" class="marker markerColor2">Show All Users</span>
+
+  <div ng-include="'includes/dynamic_showAllUsers.html'"></div>
+</div>

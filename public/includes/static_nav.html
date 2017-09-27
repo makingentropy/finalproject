@@ -31,6 +31,6 @@
   </div>
 </div>
 <div ng-if="ctrl.loggedIn==true">
-  <span class="marker markerColor1">Logged in as <span class="marker markerColor2">{{ctrl.user.username}}</span>.</span>
+  <span class="marker markerColor1">Logged in as <span ng-click="ctrl.pageShowing='includes/dynamic_userOptions.html'" class="marker markerColor2">{{ctrl.user.username}}</span>.</span>
   &nbsp;&nbsp;&nbsp;<span class="marker markerColor2" ng-click="ctrl.logout()">Log out</span>
 </div>

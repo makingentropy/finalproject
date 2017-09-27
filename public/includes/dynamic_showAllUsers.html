@@ -1,0 +1,7 @@
+
+<div ng-if=ctrl.pageShowing=="includes/dynamic_showAllUsers.html">
+  <div>{{ctrl.error}}</div>
+  <div ng-repeat="user in ctrl.users">
+    <span class="marker markerColor1B">{{user.username}}, &nbsp;</span>
+  </div>
+</div>
